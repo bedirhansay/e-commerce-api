@@ -34,3 +34,5 @@
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Prensentation/obj/Debug/net8.0/Prensentation.pdb
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Prensentation/obj/Debug/net8.0/Prensentation.genruntimeconfig.cache
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Prensentation/obj/Debug/net8.0/ref/Prensentation.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Prensentation/bin/Debug/net8.0/appsettings.Production.json
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Prensentation/obj/Debug/net8.0/Prensentation.sourcelink.json
