@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Prensentation.props" />
+</Project>
