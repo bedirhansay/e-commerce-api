@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{EEB9F939-42A8-4419-97CD-55EC551BC580}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prensentation", "Prensentation\Prensentation.csproj", "{D95BDB74-FFE1-41E2-B009-F306203BD0D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{D95BDB74-FFE1-41E2-B009-F306203BD0D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C66923C8-0C1D-4F56-973D-456FBFD5A3AF}"
 EndProject
@@ -34,7 +34,5 @@ Global
 		{19E56D55-A476-4CCA-9F51-BEE55AA11330}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{E001FB52-10CC-41D9-BA26-7DEBA419C442} = {C66923C8-0C1D-4F56-973D-456FBFD5A3AF}
-		{19E56D55-A476-4CCA-9F51-BEE55AA11330} = {C66923C8-0C1D-4F56-973D-456FBFD5A3AF}
 	EndGlobalSection
 EndGlobal

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tCz4keMjGdg=",
+  "dgSpecHash": "bKZOdGOLXwo=",
   "success": true,
-  "projectFilePath": "/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Prensentation/Prensentation.csproj",
+  "projectFilePath": "/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/Web.csproj",
   "expectedPackageFiles": [
     "/Users/bedirhansay/.nuget/packages/microsoft.aspnetcore.openapi/8.0.11/microsoft.aspnetcore.openapi.8.0.11.nupkg.sha512",
     "/Users/bedirhansay/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

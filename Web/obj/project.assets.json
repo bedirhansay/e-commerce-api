@@ -487,11 +487,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Prensentation/Prensentation.csproj",
-      "projectName": "Prensentation",
-      "projectPath": "/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Prensentation/Prensentation.csproj",
+      "projectUniqueName": "/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/Web.csproj",
+      "projectName": "Web",
+      "projectPath": "/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/Web.csproj",
       "packagesPath": "/Users/bedirhansay/.nuget/packages/",
-      "outputPath": "/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Prensentation/obj/",
+      "outputPath": "/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/obj/",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
