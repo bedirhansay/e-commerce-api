@@ -1,6 +1,7 @@
+using core.Common;
 namespace core.Entities;
 
-public class Detail
+public class Detail:EntityBase
 {
     public Detail()
     {
