@@ -8,13 +8,11 @@ public class Category:EntityBase
     public Category(string name, int parentId, int priority)
     {
         Name = name;
-        ParentId = parentId;
         Priority = priority;
     }
 
-    
+    public required Guid ParentId { get; set; } 
     public required string Name { get; set; }
-    public required int ParentId { get; set; } 
     public required int Priority { get; set; }
     public ICollection<Detail> Details { get; set; }
     public ICollection<Product> Products { get; set; }

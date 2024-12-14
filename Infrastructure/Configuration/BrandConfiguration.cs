@@ -17,13 +17,16 @@ public class BrandConfiguration: IEntityTypeConfiguration<Brand>
             .HasForeignKey(f => f.BrandId);
         
         
-        var faker = new Faker<Brand>("tr") 
-            .RuleFor(b => b.Id, f => Guid.NewGuid()) 
-            .RuleFor(b => b.Name, f => f.Company.CompanyName()) 
-            .RuleFor(b => b.IsDeleted, f => false);
-        
-        var fakeData = faker.Generate(3);
-        builder.HasData(fakeData);
+        var predefinedBrands = new List<Brand>
+        {
+            new Brand { Id = Guid.Parse("11111111-1111-1111-1111-111111111111"), Name = "Brand A", IsDeleted = false },
+            new Brand { Id = Guid.Parse("22222222-2222-2222-2222-222222222222"), Name = "Brand B", IsDeleted = false },
+            new Brand { Id = Guid.Parse("33333333-3333-3333-3333-333333333333"), Name = "Brand C", IsDeleted = false },
+        };
+
+
+        builder.HasData(predefinedBrands);
+     
     }
     
 }
