@@ -13,7 +13,6 @@
         "packagesPath": "/Users/bedirhansay/.nuget/packages/",
         "outputPath": "/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/obj/",
         "projectStyle": "PackageReference",
-        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "/Users/bedirhansay/.nuget/NuGet/NuGet.Config"
         ],
@@ -37,7 +36,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -59,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/bedirhansay/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -72,7 +71,6 @@
         "packagesPath": "/Users/bedirhansay/.nuget/packages/",
         "outputPath": "/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/obj/",
         "projectStyle": "PackageReference",
-        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "/Users/bedirhansay/.nuget/NuGet/NuGet.Config"
         ],
@@ -100,7 +98,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -114,6 +112,24 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             }
           },
           "imports": [
@@ -132,7 +148,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/bedirhansay/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

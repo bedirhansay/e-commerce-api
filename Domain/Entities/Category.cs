@@ -2,18 +2,21 @@ using core.Common;
 
 namespace core.Entities;
 
-public class Category:EntityBase
+public class Category : EntityBase
 {
-    public Category(){}
-    public Category(string name, int parentId, int priority)
+    public Category() { }
+
+    public Category(string name, Guid parentId, int priority)
     {
         Name = name;
+        ParentId = parentId;
         Priority = priority;
     }
 
-    public required Guid ParentId { get; set; } 
+    public Guid ParentId { get; set; } 
     public required string Name { get; set; }
-    public required int Priority { get; set; }
-    public ICollection<Detail> Details { get; set; }
-    public ICollection<Product> Products { get; set; }
+    public int Priority { get; set; } = 0;
+
+    public ICollection<Detail> Details { get; set; } = new List<Detail>();
+    public ICollection<Product> Products { get; set; } = new List<Product>();
 }

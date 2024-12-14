@@ -8,6 +8,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{19E56D55-A476-4CCA-9F51-BEE55AA11330}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{71E88A05-A2B6-4E79-A732-DB8BB8DAB1C9}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\docker-compose.yaml = ..\..\..\..\Downloads\docker-compose.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

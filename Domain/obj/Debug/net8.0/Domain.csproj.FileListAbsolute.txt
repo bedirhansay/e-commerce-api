@@ -1,0 +1,15 @@
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/bin/Debug/net8.0/Domain
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/bin/Debug/net8.0/Domain.deps.json
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/bin/Debug/net8.0/Domain.runtimeconfig.json
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/bin/Debug/net8.0/Domain.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/bin/Debug/net8.0/Domain.pdb
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/obj/Debug/net8.0/Domain.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/obj/Debug/net8.0/refint/Domain.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/obj/Debug/net8.0/Domain.pdb
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/obj/Debug/net8.0/Domain.genruntimeconfig.cache
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Domain/obj/Debug/net8.0/ref/Domain.dll
