@@ -1,3 +1,4 @@
+using Bogus;
 using core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -12,18 +13,34 @@ public class BrandConfiguration : IEntityTypeConfiguration<Brand>
             .IsRequired()
             .HasMaxLength(50);
         
-        builder.HasMany(b => b.Products)
-            .WithOne(p => p.Brand)
-            .HasForeignKey(p => p.BrandId)
-            .OnDelete(DeleteBehavior.Restrict);
+  
         
-        var predefinedBrands = new List<Brand>
+        Faker faker = new("tr");
+
+        Brand brand1 = new()
         {
-            new Brand { Id = Guid.Parse("11111111-1111-1111-1111-111111111111"), Name = "Brand A", IsDeleted = false },
-            new Brand { Id = Guid.Parse("22222222-2222-2222-2222-222222222222"), Name = "Brand B", IsDeleted = false },
-            new Brand { Id = Guid.Parse("33333333-3333-3333-3333-333333333333"), Name = "Brand C", IsDeleted = false }
+            Id = 1,
+            Name = faker.Commerce.Department(),
+            CreatedDate = DateTime.Now,
+            IsDeleted = false
         };
 
-        builder.HasData(predefinedBrands);
+        Brand brand2 = new()
+        {
+            Id = 2,
+            Name = faker.Commerce.Department(),
+            CreatedDate = DateTime.Now,
+            IsDeleted = false
+        };
+
+        Brand brand3 = new()
+        {
+            Id = 3,
+            Name = faker.Commerce.Department(),
+            CreatedDate = DateTime.Now,
+            IsDeleted = true
+        };
+        builder.HasData(brand1, brand2, brand3);
+
     }
 }

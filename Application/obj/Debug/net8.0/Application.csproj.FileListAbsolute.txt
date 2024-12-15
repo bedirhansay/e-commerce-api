@@ -1,0 +1,12 @@
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/bin/Debug/net8.0/Application.deps.json
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/bin/Debug/net8.0/Application.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/bin/Debug/net8.0/Application.pdb
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/Application.AssemblyInfoInputs.cache
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/Application.AssemblyInfo.cs
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/Application.csproj.CoreCompileInputs.cache
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/Application.sourcelink.json
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/Application.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/refint/Application.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/Application.pdb
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/ref/Application.dll

@@ -4,19 +4,19 @@ namespace core.Entities;
 
 public class Category : EntityBase
 {
-    public Category() { }
-
-    public Category(string name, Guid parentId, int priority)
+    public Category()
     {
-        Name = name;
+            
+    }
+    public Category(int parentId, string name, int priority)
+    {
         ParentId = parentId;
+        Name = name;
         Priority = priority;
     }
-
-    public Guid ParentId { get; set; } 
-    public required string Name { get; set; }
-    public int Priority { get; set; } = 0;
-
-    public ICollection<Detail> Details { get; set; } = new List<Detail>();
-    public ICollection<Product> Products { get; set; } = new List<Product>();
+    public int ParentId { get; set; }
+    public string Name { get; set; }
+    public int Priority { get; set; }
+    public ICollection<Detail> Details { get; set; }
+    public ICollection<Category> ProductCategories { get; set; }
 }

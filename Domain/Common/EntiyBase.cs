@@ -4,10 +4,8 @@ namespace core.Common;
 
 public class EntityBase : IEntityBase
 {
-    public required Guid Id{ get; set;} = Guid.NewGuid();
-    public DateTime CreatedDate { get; } = DateTime.UtcNow;
-    public DateTime? UpdatedDate { get; set; }
+    public int Id { get; set; }
+    public DateTime CreatedDate { get; set; } = DateTime.Now;
     public bool IsDeleted { get; set; } = false;
-
-
-}
+      
+    }

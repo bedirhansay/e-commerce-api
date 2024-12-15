@@ -18,21 +18,48 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
         builder.Property(c => c.Priority)
             .IsRequired();
 
-        builder.HasMany(c => c.Details)
-            .WithOne(d => d.Category)
-            .HasForeignKey(d => d.CategoryId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-        builder.HasMany(c => c.Products)
-            .WithMany(p => p.Categories);
-
-        var predefinedCategories = new List<Category>
+     
+        Category category1 = new()
         {
-            new Category { Id = Guid.Parse("41111111-1111-1111-1111-111111111111"), Name = "Elektronik", Priority = 1, ParentId = Guid.Empty },
-            new Category { Id = Guid.Parse("42222222-2222-2222-2222-222222222222"), Name = "Moda", Priority = 2, ParentId = Guid.Empty },
-            new Category { Id = Guid.Parse("43333333-3333-3333-3333-333333333333"), Name = "Telefonlar", Priority = 3, ParentId = Guid.Parse("41111111-1111-1111-1111-111111111111") }
+            Id = 1,
+            Name = "Elektrik",
+            Priority = 1,
+            ParentId = 0,
+            IsDeleted = false,
+            CreatedDate = DateTime.Now,
         };
 
-        builder.HasData(predefinedCategories);
+        Category category2 = new()
+        {
+            Id = 2,
+            Name = "Moda",
+            Priority = 2,
+            ParentId = 0,
+            IsDeleted = false,
+            CreatedDate = DateTime.Now,
+        };
+
+        Category parent1 = new()
+        {
+            Id = 3,
+            Name = "Bilgisayar",
+            Priority = 1,
+            ParentId = 1,
+            IsDeleted = false,
+            CreatedDate = DateTime.Now,
+        };
+
+        Category parent2 = new()
+        {
+            Id = 4,
+            Name = "Kadın",
+            Priority = 1,
+            ParentId = 2,
+            IsDeleted = false,
+            CreatedDate = DateTime.Now,
+        };
+
+        builder.HasData(category1, category2, parent1, parent2);
+
     }
 }

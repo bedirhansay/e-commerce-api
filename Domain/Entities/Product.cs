@@ -4,24 +4,27 @@ namespace core.Entities;
 
 public class Product : EntityBase
 {
-    public Product() { }
+    public Product()
+    {
 
-    public Product(string title, string description, decimal price, int discount, Guid brandId)
+    }
+
+    public Product(string title, string description, int brandId, decimal price, decimal discount)
     {
         Title = title;
         Description = description;
+        BrandId = brandId;
         Price = price;
         Discount = discount;
-        BrandId = brandId;
-       
     }
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public int BrandId { get; set; }
+    public decimal Price { get; set; }
+    public decimal Discount { get; set; }
 
-    public required string Title { get; set; }
-    public required string Description { get; set; }
-    public required decimal Price { get; set; }
-    public required int Discount { get; set; }
-    public Guid BrandId { get; set; } 
+    public Brand Brand { get; set; }
 
-    public Brand Brand { get; set; } 
-    public ICollection<Category> Categories { get; set; } = new List<Category>(); // Kategoriler
+    public ICollection<Category> ProductCategories { get; set; }
+    //public required string ImagePath { get; set; }
 }
