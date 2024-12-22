@@ -126,3 +126,5 @@
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/obj/Debug/net8.0/Infrastr.15EFFBFE.Up2Date
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/Application.dll
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/Application.pdb
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/MediatR.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/MediatR.Contracts.dll
