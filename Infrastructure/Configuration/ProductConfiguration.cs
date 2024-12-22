@@ -30,7 +30,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             BrandId = 1,
             Discount = faker.Random.Decimal(0, 10),
             Price = faker.Finance.Amount(10, 1000),
-            CreatedDate = DateTime.Now,
+            CreatedDate = DateTime.UtcNow,
             IsDeleted = false,
         };
         Product product2 = new()
@@ -41,7 +41,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             BrandId = 3,
             Discount = faker.Random.Decimal(0, 10),
             Price = faker.Finance.Amount(10, 1000),
-            CreatedDate = DateTime.Now,
+            CreatedDate = DateTime.UtcNow,
             IsDeleted = false,
         };
 

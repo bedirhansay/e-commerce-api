@@ -124,3 +124,5 @@
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/Domain.pdb
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.AssemblyReference.cache
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/obj/Debug/net8.0/Infrastr.15EFFBFE.Up2Date
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/Application.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/Application.pdb

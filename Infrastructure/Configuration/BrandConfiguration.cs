@@ -13,15 +13,13 @@ public class BrandConfiguration : IEntityTypeConfiguration<Brand>
             .IsRequired()
             .HasMaxLength(50);
         
-  
-        
         Faker faker = new("tr");
 
         Brand brand1 = new()
         {
             Id = 1,
             Name = faker.Commerce.Department(),
-            CreatedDate = DateTime.Now,
+            CreatedDate = DateTime.UtcNow,
             IsDeleted = false
         };
 

@@ -25,7 +25,7 @@ public class DetailConfiguration : IEntityTypeConfiguration<Detail>
             Title = faker.Lorem.Sentence(1),
             Description = faker.Lorem.Sentence(5),
             CategoryId = 1,
-            CreatedDate = DateTime.Now,
+            CreatedDate = DateTime.UtcNow,
             IsDeleted = false,
         };
         Detail detail2 = new()
@@ -34,7 +34,7 @@ public class DetailConfiguration : IEntityTypeConfiguration<Detail>
             Title = faker.Lorem.Sentence(2),
             Description = faker.Lorem.Sentence(5),
             CategoryId = 3,
-            CreatedDate = DateTime.Now,
+            CreatedDate = DateTime.UtcNow,
             IsDeleted = true,
         };
         Detail detail3 = new()
@@ -43,7 +43,7 @@ public class DetailConfiguration : IEntityTypeConfiguration<Detail>
             Title = faker.Lorem.Sentence(1),
             Description = faker.Lorem.Sentence(5),
             CategoryId = 4,
-            CreatedDate = DateTime.Now,
+            CreatedDate = DateTime.UtcNow,
             IsDeleted = false,
         };
 
