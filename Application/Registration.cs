@@ -1,4 +1,5 @@
 using System.Reflection;
+using Application.Bases;
 using Application.Exceptions;
 using Application.Interface.AutoMapper;
 using FluentValidation;
@@ -28,5 +29,21 @@ public static class Registration
         
         // FluentValidation Behavior'ı MediatR Pipeline'a ekle
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(Behaviors.FluentValidationBehavior<,>));
+
+        // Custom Rulelları ekle
+        services.AddRulesFromAssemblyContaining(assembly, typeof(BaseRules));
+    }
+
+    public static IServiceCollection AddRulesFromAssemblyContaining(this IServiceCollection services,
+        Assembly assembly, Type rulesType )
+    {
+        var types = assembly.GetTypes().Where(t => t.IsClass && 
+                                                   !t.IsAbstract && rulesType.IsAssignableFrom(t));
+
+        foreach (var rule in types)
+        {
+            services.AddTransient(rule);
+        }
+        return services;
     }
 }
