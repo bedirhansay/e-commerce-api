@@ -1,8 +1,9 @@
-
 using Infrastructure;
 using Application;
+using Application.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
+
 // Servis eklemeleri
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -21,8 +22,7 @@ builder.Configuration.AddJsonFile($"appsettings.{builder.Environment.Environment
 
 // Custom servis eklemeleri
 builder.Services.AddInfrastructureServices(builder.Configuration);
-builder.Services.AddApplication();
-builder.Services.AddCustomMapper();
+builder.Services.AddApplication(); // Artık AddCustomMapper burada dahil
 
 // CORS yapılandırması
 builder.Services.AddCors(options =>
@@ -45,11 +45,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// ExceptionMiddleware'i kullan
+app.ConfigureExceptionHandler();
+
 // CORS politikasını etkinleştir
 app.UseCors("AllowAllOrigins");
 
 // HTTPS yönlendirme
-// app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 // Controller'ları haritala
 app.MapControllers();

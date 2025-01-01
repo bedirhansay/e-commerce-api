@@ -133,3 +133,6 @@
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/SendGrid.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/StarkbankEcdsa.dll
