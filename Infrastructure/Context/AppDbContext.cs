@@ -12,9 +12,9 @@ public class AppDbContext: DbContext
    public DbSet<Detail> Details { get; set; }
    public DbSet<ProductCategory> ProductCategories { get; set; }
 
-    // protected override void OnModelCreating(ModelBuilder modelBuilder)
-    // {
-    //     base.OnModelCreating(modelBuilder);
-    //     modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-    // }
+   protected override void OnModelCreating(ModelBuilder modelBuilder)
+   {
+       base.OnModelCreating(modelBuilder);
+       modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+   }
 }

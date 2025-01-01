@@ -23,7 +23,7 @@ public class DetailConfiguration : IEntityTypeConfiguration<Detail>
             Title = "Elektrik Detay",
             Description = "Elektrik kategorisine ait detay açıklaması.",
             CategoryId = 1,
-            CreatedDate = new DateTime(2023, 12, 31),
+            CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
             IsDeleted = false,
         };
         Detail detail2 = new()
@@ -32,7 +32,7 @@ public class DetailConfiguration : IEntityTypeConfiguration<Detail>
             Title = "Bilgisayar Detay",
             Description = "Bilgisayar kategorisine ait detay açıklaması.",
             CategoryId = 3,
-            CreatedDate = new DateTime(2023, 12, 31),
+            CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
             IsDeleted = true,
         };
         Detail detail3 = new()
@@ -41,7 +41,7 @@ public class DetailConfiguration : IEntityTypeConfiguration<Detail>
             Title = "Kadın Detay",
             Description = "Kadın kategorisine ait detay açıklaması.",
             CategoryId = 4,
-            CreatedDate = new DateTime(2023, 12, 31),
+            CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
             IsDeleted = false,
         };
 

@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Http;
 using SendGrid.Helpers.Errors.Model;
 using System.Net;
 using System.Text.Json;
+using FluentValidation;
+using ValidationException = FluentValidation.ValidationException;
 
 namespace Application.Exceptions;
 
@@ -26,23 +28,29 @@ public class ExceptionMiddleware : IMiddleware
         int statusCode = GetStatusCode(exception); // Hata durum kodunu belirle
         httpContext.Response.StatusCode = statusCode; // HTTP yanıt durum kodunu ayarla
     
-        // Hata mesajlarını bir liste halinde topluyoruz
-        List<string> errors = new()
-        {
-            exception.Message // Hatanın ana mesajı
-        };
+        List<string> errors = new();
 
-        // Eğer bir iç hata (InnerException) varsa, bunu da ekliyoruz
-        if (exception.InnerException != null)
+        // Eğer FluentValidation'dan gelen bir doğrulama hatası varsa
+        if (exception is ValidationException validationException)
         {
-            errors.Add(exception.InnerException.Message);
+            errors.AddRange(validationException.Errors.Select(e => e.ErrorMessage)); // Tüm hata mesajlarını listeye ekle
+        }
+        else
+        {
+            // Diğer hatalar için standart mesaj
+            errors.Add(exception.Message);
+
+            if (exception.InnerException != null)
+            {
+                errors.Add(exception.InnerException.Message);
+            }
         }
 
         // ExceptionModel nesnesini oluşturuyoruz
         var errorResponse = new ExceptionModel
         {
             StatusCode = statusCode,
-            Errors = errors // Hata mesajlarını liste olarak ekle
+            Errors = errors
         };
 
         // Oluşturulan ExceptionModel nesnesini JSON formatında döndür
@@ -53,9 +61,9 @@ public class ExceptionMiddleware : IMiddleware
     {
         return exception switch
         {
+            ValidationException => StatusCodes.Status400BadRequest, // Doğrulama hatası
             BadRequestException => StatusCodes.Status400BadRequest, // Hatalı İstek
             UnauthorizedAccessException => StatusCodes.Status401Unauthorized, // Yetkisiz
-            ValidationException => StatusCodes.Status400BadRequest, // Doğrulama Hatası
             NotFoundException => StatusCodes.Status404NotFound, // Kaynak Bulunamadı
             ForbiddenException => StatusCodes.Status403Forbidden, // Yasaklı Erişim
             TooManyRequestsException => StatusCodes.Status429TooManyRequests, // Çok Fazla İstek

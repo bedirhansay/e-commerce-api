@@ -38,11 +38,35 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Brands");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsDeleted = false,
+                            Name = "Elektronik"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsDeleted = false,
+                            Name = "Mobilya"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsDeleted = true,
+                            Name = "Kozmetik"
+                        });
                 });
 
             modelBuilder.Entity("core.Entities.Category", b =>
@@ -56,16 +80,13 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Hebele")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<int>("ParentId")
                         .HasColumnType("integer");
@@ -76,6 +97,44 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsDeleted = false,
+                            Name = "Elektrik",
+                            ParentId = 0,
+                            Priority = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsDeleted = false,
+                            Name = "Moda",
+                            ParentId = 0,
+                            Priority = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsDeleted = false,
+                            Name = "Bilgisayar",
+                            ParentId = 1,
+                            Priority = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsDeleted = false,
+                            Name = "Kadın",
+                            ParentId = 2,
+                            Priority = 1
+                        });
                 });
 
             modelBuilder.Entity("core.Entities.Detail", b =>
@@ -94,20 +153,51 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Details");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 1,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Elektrik kategorisine ait detay açıklaması.",
+                            IsDeleted = false,
+                            Title = "Elektrik Detay"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 3,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Bilgisayar kategorisine ait detay açıklaması.",
+                            IsDeleted = true,
+                            Title = "Bilgisayar Detay"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 4,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Kadın kategorisine ait detay açıklaması.",
+                            IsDeleted = false,
+                            Title = "Kadın Detay"
+                        });
                 });
 
             modelBuilder.Entity("core.Entities.Product", b =>
@@ -126,7 +216,8 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.Property<decimal>("Discount")
                         .HasColumnType("numeric");
@@ -139,40 +230,70 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("BrandId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BrandId = 1,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Yüksek performanslı bir akıllı telefon.",
+                            Discount = 5.5m,
+                            IsDeleted = false,
+                            Price = 850.99m,
+                            Title = "Telefon"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BrandId = 3,
+                            CreatedDate = new DateTime(2023, 12, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Yüksek çözünürlüklü ekran ve güçlü performans.",
+                            Discount = 7.2m,
+                            IsDeleted = false,
+                            Price = 1200.75m,
+                            Title = "Laptop"
+                        });
                 });
 
             modelBuilder.Entity("core.Entities.ProductCategory", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("ProductId")
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
                     b.Property<int>("CategoryId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("CategoryId1")
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("Id")
+                        .HasColumnType("integer");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
-                    b.Property<int>("ProductId")
+                    b.Property<int?>("ProductId1")
                         .HasColumnType("integer");
 
-                    b.HasKey("Id");
+                    b.HasKey("ProductId", "CategoryId");
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("ProductId");
+                    b.HasIndex("CategoryId1");
+
+                    b.HasIndex("ProductId1");
 
                     b.ToTable("ProductCategories");
                 });
@@ -202,16 +323,24 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("core.Entities.ProductCategory", b =>
                 {
                     b.HasOne("core.Entities.Category", "Category")
-                        .WithMany("ProductCategories")
+                        .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("core.Entities.Product", "Product")
+                    b.HasOne("core.Entities.Category", null)
                         .WithMany("ProductCategories")
+                        .HasForeignKey("CategoryId1");
+
+                    b.HasOne("core.Entities.Product", "Product")
+                        .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("core.Entities.Product", null)
+                        .WithMany("ProductCategories")
+                        .HasForeignKey("ProductId1");
 
                     b.Navigation("Category");
 

@@ -136,3 +136,6 @@
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/SendGrid.dll
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/StarkbankEcdsa.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/FluentValidation.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Infrastructure/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll

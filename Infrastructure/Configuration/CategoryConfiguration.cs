@@ -26,7 +26,7 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
             Priority = 1,
             ParentId = 0,
             IsDeleted = false,
-            CreatedDate = new DateTime(2023, 12, 31),
+            CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
         };
 
         Category category2 = new()
@@ -36,7 +36,7 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
             Priority = 2,
             ParentId = 0,
             IsDeleted = false,
-            CreatedDate = new DateTime(2023, 12, 31),
+            CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
         };
 
         Category parent1 = new()
@@ -46,7 +46,7 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
             Priority = 1,
             ParentId = 1,
             IsDeleted = false,
-            CreatedDate = new DateTime(2023, 12, 31),
+            CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
         };
 
         Category parent2 = new()
@@ -56,7 +56,7 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
             Priority = 1,
             ParentId = 2,
             IsDeleted = false,
-            CreatedDate = new DateTime(2023, 12, 31),
+            CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
         };
 
         builder.HasData(category1, category2, parent1, parent2);

@@ -27,14 +27,13 @@ builder.Services.AddApplication(); // Artık AddCustomMapper burada dahil
 // CORS yapılandırması
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAllOrigins", builder =>
+    options.AddPolicy("SwaggerPolicy", builder =>
     {
-        builder.AllowAnyOrigin() // Swagger UI'den gelen istekleri kabul eder
+        builder.WithOrigins("http://localhost:5016") // Swagger UI'nin URL'si
             .AllowAnyMethod()
             .AllowAnyHeader();
     });
 });
-
 // Uygulama oluşturma
 var app = builder.Build();
 
@@ -48,11 +47,11 @@ if (app.Environment.IsDevelopment())
 // ExceptionMiddleware'i kullan
 app.ConfigureExceptionHandler();
 
-// CORS politikasını etkinleştir
-app.UseCors("AllowAllOrigins");
-
-// HTTPS yönlendirme
-app.UseHttpsRedirection();
+// // CORS politikasını etkinleştir
+// app.UseCors("AllowAllOrigins");
+//
+// // HTTPS yönlendirme
+// app.UseHttpsRedirection();
 
 // Controller'ları haritala
 app.MapControllers();

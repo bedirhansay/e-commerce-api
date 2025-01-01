@@ -18,21 +18,21 @@ public class BrandConfiguration : IEntityTypeConfiguration<Brand>
             {
                 Id = 1,
                 Name = "Elektronik",
-                CreatedDate = new DateTime(2023, 12, 31),
+                CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
                 IsDeleted = false
             },
             new Brand
             {
                 Id = 2,
                 Name = "Mobilya",
-                CreatedDate = new DateTime(2023, 12, 31),
+                CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
                 IsDeleted = false
             },
             new Brand
             {
                 Id = 3,
                 Name = "Kozmetik",
-                CreatedDate = new DateTime(2023, 12, 31),
+                CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
                 IsDeleted = true
             }
         );

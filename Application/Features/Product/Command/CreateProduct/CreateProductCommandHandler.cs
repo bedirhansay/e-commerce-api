@@ -6,7 +6,7 @@ using core.Entities;
 
 namespace Application.Features.Product.Command.CreateProduct;
 
-public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandRequest>
+public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandRequest,Unit>
 {
     private readonly IUnitOfWork _unitOfWork;
 
@@ -15,7 +15,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandR
         _unitOfWork = unitOfWork;
     }
 
-    public async Task Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
     {
         core.Entities.Product product = new(request.Title,
             request.Description, request.BrandId, request.Price, request.Discount);
@@ -35,6 +35,8 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandR
             {
                 
             }
+         
         }
+        return Unit.Value;
     }
 }

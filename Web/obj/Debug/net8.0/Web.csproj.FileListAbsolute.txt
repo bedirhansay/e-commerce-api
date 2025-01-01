@@ -152,9 +152,12 @@
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/bin/Debug/net8.0/MediatR.dll
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/bin/Debug/net8.0/MediatR.Contracts.dll
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/bin/Debug/net8.0/AutoMapper.dll
-/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/bin/Debug/net8.0/Web.staticwebassets.endpoints.json
-/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/obj/Debug/net8.0/staticwebassets.build.endpoints.json
-/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/obj/Debug/net8.0/staticwebassets/msbuild.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/bin/Debug/net8.0/SendGrid.dll
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/bin/Debug/net8.0/StarkbankEcdsa.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/bin/Debug/net8.0/Web.staticwebassets.endpoints.json
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/obj/Debug/net8.0/staticwebassets/msbuild.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/bin/Debug/net8.0/FluentValidation.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll

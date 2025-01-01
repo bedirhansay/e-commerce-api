@@ -28,7 +28,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             BrandId = 1,
             Discount = 5.5m,
             Price = 850.99m,
-            CreatedDate = new DateTime(2023, 12, 31),
+            CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
             IsDeleted = false,
         };
         Product product2 = new()
@@ -39,7 +39,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             BrandId = 3,
             Discount = 7.2m,
             Price = 1200.75m,
-            CreatedDate = new DateTime(2023, 12, 31),
+            CreatedDate = DateTime.SpecifyKind(new DateTime(2023, 12, 31), DateTimeKind.Utc),
             IsDeleted = false,
         };
 
