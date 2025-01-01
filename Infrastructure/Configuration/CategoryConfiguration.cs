@@ -18,7 +18,7 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
         builder.Property(c => c.Priority)
             .IsRequired();
 
-     
+        // Sabit tarih değerleriyle tohumlama
         Category category1 = new()
         {
             Id = 1,
@@ -26,7 +26,7 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
             Priority = 1,
             ParentId = 0,
             IsDeleted = false,
-            CreatedDate = DateTime.UtcNow,
+            CreatedDate = new DateTime(2023, 12, 31),
         };
 
         Category category2 = new()
@@ -36,7 +36,7 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
             Priority = 2,
             ParentId = 0,
             IsDeleted = false,
-            CreatedDate = DateTime.UtcNow,
+            CreatedDate = new DateTime(2023, 12, 31),
         };
 
         Category parent1 = new()
@@ -46,7 +46,7 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
             Priority = 1,
             ParentId = 1,
             IsDeleted = false,
-            CreatedDate = DateTime.UtcNow,
+            CreatedDate = new DateTime(2023, 12, 31),
         };
 
         Category parent2 = new()
@@ -56,10 +56,9 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
             Priority = 1,
             ParentId = 2,
             IsDeleted = false,
-            CreatedDate = DateTime.UtcNow,
+            CreatedDate = new DateTime(2023, 12, 31),
         };
 
         builder.HasData(category1, category2, parent1, parent2);
-
     }
 }

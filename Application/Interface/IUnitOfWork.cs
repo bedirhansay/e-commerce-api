@@ -1,6 +1,12 @@
+using Application.Interface.Repositories;
+using core.Common;
+
 namespace Application.Interface;
 
-public interface UnitOfWork
+public interface IUnitOfWork:IAsyncDisposable
 {
-    
+    IReadRepository<T> GetReadRepository<T>() where T : class, IEntityBase, new();
+    IWriteRepository<T> GetWriteRepository<T>() where T : class, IEntityBase, new();
+    Task<int> SaveAsync();
+    int Save();
 }

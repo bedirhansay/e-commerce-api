@@ -1,32 +1,57 @@
 
 using Infrastructure;
+using Application;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Servis eklemeleri
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// HTTPS yönlendirme yapılandırması
+builder.Services.AddHttpsRedirection(options =>
+{
+    options.HttpsPort = 5001; // HTTPS portu
+});
+
+// Yapılandırma dosyaları
 builder.Configuration.AddEnvironmentVariables();
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 builder.Configuration.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true);
-builder.Services.AddInfrastructureServices(builder.Configuration);
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-Console.WriteLine($"Connection String: {connectionString}");
+// Custom servis eklemeleri
+builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddApplication();
+builder.Services.AddCustomMapper();
+
+// CORS yapılandırması
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", builder =>
+    {
+        builder.AllowAnyOrigin() // Swagger UI'den gelen istekleri kabul eder
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
+
+// Uygulama oluşturma
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// HTTP pipeline yapılandırması
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// CORS politikasını etkinleştir
+app.UseCors("AllowAllOrigins");
 
+// HTTPS yönlendirme
+// app.UseHttpsRedirection();
+
+// Controller'ları haritala
+app.MapControllers();
 
 app.Run();
-

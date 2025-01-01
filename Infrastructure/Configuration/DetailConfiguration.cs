@@ -1,4 +1,3 @@
-using Bogus;
 using core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,36 +16,35 @@ public class DetailConfiguration : IEntityTypeConfiguration<Detail>
             .IsRequired()
             .HasMaxLength(500);
 
-        Faker faker = new("tr");
-
+        // Sabit değerlerle tohumlama
         Detail detail1 = new()
         {
             Id = 1,
-            Title = faker.Lorem.Sentence(1),
-            Description = faker.Lorem.Sentence(5),
+            Title = "Elektrik Detay",
+            Description = "Elektrik kategorisine ait detay açıklaması.",
             CategoryId = 1,
-            CreatedDate = DateTime.UtcNow,
+            CreatedDate = new DateTime(2023, 12, 31),
             IsDeleted = false,
         };
         Detail detail2 = new()
         {
             Id = 2,
-            Title = faker.Lorem.Sentence(2),
-            Description = faker.Lorem.Sentence(5),
+            Title = "Bilgisayar Detay",
+            Description = "Bilgisayar kategorisine ait detay açıklaması.",
             CategoryId = 3,
-            CreatedDate = DateTime.UtcNow,
+            CreatedDate = new DateTime(2023, 12, 31),
             IsDeleted = true,
         };
         Detail detail3 = new()
         {
             Id = 3,
-            Title = faker.Lorem.Sentence(1),
-            Description = faker.Lorem.Sentence(5),
+            Title = "Kadın Detay",
+            Description = "Kadın kategorisine ait detay açıklaması.",
             CategoryId = 4,
-            CreatedDate = DateTime.UtcNow,
+            CreatedDate = new DateTime(2023, 12, 31),
             IsDeleted = false,
         };
 
-        builder.HasData(detail1, detail2, detail3); 
+        builder.HasData(detail1, detail2, detail3);
     }
 }

@@ -10,3 +10,10 @@
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/refint/Application.dll
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/Application.pdb
 /Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/ref/Application.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/bin/Debug/net8.0/Domain.deps.json
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/bin/Debug/net8.0/Domain.runtimeconfig.json
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/bin/Debug/net8.0/Domain
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/bin/Debug/net8.0/Domain.dll
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/bin/Debug/net8.0/Domain.pdb
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/Application.csproj.AssemblyReference.cache
+/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Application/obj/Debug/net8.0/Applicat.44B5EDA2.Up2Date

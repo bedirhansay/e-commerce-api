@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "g45MKuN54tc=",
+  "dgSpecHash": "6vWD+LRyxyo=",
   "success": true,
   "projectFilePath": "/Users/bedirhansay/Desktop/BedirhanSay/projects/E-commerce/Web/Web.csproj",
   "expectedPackageFiles": [
+    "/Users/bedirhansay/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/Users/bedirhansay/.nuget/packages/bogus/35.6.1/bogus.35.6.1.nupkg.sha512",
     "/Users/bedirhansay/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/bedirhansay/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
+    "/Users/bedirhansay/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/bedirhansay/.nuget/packages/microsoft.aspnetcore.openapi/8.0.11/microsoft.aspnetcore.openapi.8.0.11.nupkg.sha512",
     "/Users/bedirhansay/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "/Users/bedirhansay/.nuget/packages/microsoft.build.framework/17.8.3/microsoft.build.framework.17.8.3.nupkg.sha512",

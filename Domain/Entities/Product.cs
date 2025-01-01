@@ -4,10 +4,7 @@ namespace core.Entities;
 
 public class Product : EntityBase
 {
-    public Product()
-    {
-
-    }
+    public Product() {}
 
     public Product(string title, string description, int brandId, decimal price, decimal discount)
     {
@@ -25,6 +22,6 @@ public class Product : EntityBase
 
     public Brand Brand { get; set; }
 
-    public ICollection<Category> ProductCategories { get; set; }
+    public ICollection<ProductCategory> ProductCategories { get; set; }
     //public required string ImagePath { get; set; }
 }

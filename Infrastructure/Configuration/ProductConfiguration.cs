@@ -1,4 +1,3 @@
-using Bogus;
 using core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -19,29 +18,28 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
 
         builder.Property(p => p.Price)
             .IsRequired();
-        
-        Faker faker = new("tr");
 
+        // Sabit değerlerle tohumlama
         Product product1 = new()
         {
             Id = 1,
-            Title = faker.Commerce.ProductName(),
-            Description = faker.Commerce.ProductDescription(),
+            Title = "Telefon",
+            Description = "Yüksek performanslı bir akıllı telefon.",
             BrandId = 1,
-            Discount = faker.Random.Decimal(0, 10),
-            Price = faker.Finance.Amount(10, 1000),
-            CreatedDate = DateTime.UtcNow,
+            Discount = 5.5m,
+            Price = 850.99m,
+            CreatedDate = new DateTime(2023, 12, 31),
             IsDeleted = false,
         };
         Product product2 = new()
         {
             Id = 2,
-            Title = faker.Commerce.ProductName(),
-            Description = faker.Commerce.ProductDescription(),
+            Title = "Laptop",
+            Description = "Yüksek çözünürlüklü ekran ve güçlü performans.",
             BrandId = 3,
-            Discount = faker.Random.Decimal(0, 10),
-            Price = faker.Finance.Amount(10, 1000),
-            CreatedDate = DateTime.UtcNow,
+            Discount = 7.2m,
+            Price = 1200.75m,
+            CreatedDate = new DateTime(2023, 12, 31),
             IsDeleted = false,
         };
 

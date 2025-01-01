@@ -12,6 +12,7 @@ public interface IWriteRepository<T> : IWriteRepository where T : class,IEntityB
     Task AddRangeAsync(IList<T> entities);
     Task<T> UpdateAsync(T entity);
     Task HardDeleteAsync(T entity);
+    Task HardDeleteRangeAsync(IList<T> entity);
     Task SoftDeleteAsync(T entity);
     
 }

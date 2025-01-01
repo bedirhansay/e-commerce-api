@@ -12,33 +12,30 @@ public class BrandConfiguration : IEntityTypeConfiguration<Brand>
         builder.Property(b => b.Name)
             .IsRequired()
             .HasMaxLength(50);
-        
-        Faker faker = new("tr");
 
-        Brand brand1 = new()
-        {
-            Id = 1,
-            Name = faker.Commerce.Department(),
-            CreatedDate = DateTime.UtcNow,
-            IsDeleted = false
-        };
-
-        Brand brand2 = new()
-        {
-            Id = 2,
-            Name = faker.Commerce.Department(),
-            CreatedDate = DateTime.Now,
-            IsDeleted = false
-        };
-
-        Brand brand3 = new()
-        {
-            Id = 3,
-            Name = faker.Commerce.Department(),
-            CreatedDate = DateTime.Now,
-            IsDeleted = true
-        };
-        builder.HasData(brand1, brand2, brand3);
+        builder.HasData(
+            new Brand
+            {
+                Id = 1,
+                Name = "Elektronik",
+                CreatedDate = new DateTime(2023, 12, 31),
+                IsDeleted = false
+            },
+            new Brand
+            {
+                Id = 2,
+                Name = "Mobilya",
+                CreatedDate = new DateTime(2023, 12, 31),
+                IsDeleted = false
+            },
+            new Brand
+            {
+                Id = 3,
+                Name = "Kozmetik",
+                CreatedDate = new DateTime(2023, 12, 31),
+                IsDeleted = true
+            }
+        );
 
     }
 }
